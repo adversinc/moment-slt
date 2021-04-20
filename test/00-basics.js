@@ -27,4 +27,11 @@ describe('time difference', function() {
 		assert.equal(n.second(), now.getUTCSeconds());
 		assert.equal(n.date(), shouldBeDate);
 	});
+
+	it('should be correct around UTC', function() {
+		const n = moment("1992-01-01 00:01:02Z").tz("America/Los_Angeles");
+
+		// Check if components of the date are correct
+		assert.equal(n.format("dddd, MMMM Do YYYY, HH:mm:ss ZZ"), "Tuesday, December 31st 1991, 16:01:02 -0800");
+	});
 });
