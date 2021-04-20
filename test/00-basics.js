@@ -34,4 +34,14 @@ describe('time difference', function() {
 		// Check if components of the date are correct
 		assert.equal(n.format("dddd, MMMM DD YYYY, HH:mm:ss ZZ"), "Sunday, April 18 2021, 17:01:02 -0700");
 	});
+
+	it('should have correct default TZ', function() {
+		const n = moment();
+		const now = new Date();
+
+		console.log("now ISO: " + now.toISOString());
+
+		// Check if components of the date are correct
+		assert.equal(n.toISOString(), now.toISOString());
+	});
 });
