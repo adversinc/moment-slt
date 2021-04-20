@@ -32,6 +32,6 @@ describe('time difference', function() {
 		const n = moment("1992-01-01 00:01:02Z").tz("America/Los_Angeles");
 
 		// Check if components of the date are correct
-		assert.equal(n.toString(), "Tue Dec 31 1991 16:01:02 GMT-0800");
+		assert.equal(n.format("dddd, MMMM Do YYYY, HH:mm:ss ZZ"), "Tuesday, December 31st 1991, 16:01:02 -0800");
 	});
 });
