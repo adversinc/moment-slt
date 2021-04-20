@@ -29,9 +29,9 @@ describe('time difference', function() {
 	});
 
 	it('should be correct around UTC', function() {
-		const n = moment("1992-01-01 00:01:02Z").tz("America/Los_Angeles");
+		const n = moment("2021-04-19 00:01:02Z").tz("America/Los_Angeles");
 
 		// Check if components of the date are correct
-		assert.equal(n.format("dddd, MMMM Do YYYY, HH:mm:ss ZZ"), "Tuesday, December 31st 1991, 16:01:02 -0800");
+		assert.equal(n.format("dddd, MMMM DD YYYY, HH:mm:ss ZZ"), "Sunday, April 18 2021, 17:01:02 -0700");
 	});
 });
