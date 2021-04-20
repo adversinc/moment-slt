@@ -6,8 +6,11 @@
  * Use this module instead of moment/moment-timezone everywhere.
  */
 
-const
-	moment = require("moment-timezone/moment-timezone.js");
+//import moment from "moment-timezone/moment-timezone";
+import dayjs from "dayjs";
+
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
 const SLT = {
 	"version": "2017c",
@@ -20,6 +23,10 @@ const SLT = {
 	]
 };
 
-moment.tz.load(SLT);
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
-export default moment;
+// moment.tz.load(SLT);
+// export default moment;
+
+export default dayjs;

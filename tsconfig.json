@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		//"sourceMap": true,
+		"allowJs": true,
+		"esModuleInterop": true,
+		"moduleResolution": "Node",
+		"module": "commonjs",
+		"target": "es2019",
+		"declaration": true,
+
+		"baseUrl": "./",
+		"paths" : {
+			"/*": ["./*"]
+		},
+
+		"outDir": "lib"
+	},
+
+	"include": [
+		"./src/*"
+	]
+}

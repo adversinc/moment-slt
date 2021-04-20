@@ -3,7 +3,7 @@ const
 	assert = require('assert');
 
 // Libs to test
-const moment = require("../lib/index");
+const moment = require("../lib/index").default;
 
 // Tests
 describe('time difference', function() {
@@ -11,7 +11,7 @@ describe('time difference', function() {
 		const now = new Date();
 		const n = moment.tz(new Date(), "America/Los_Angeles");
 
-		let diff = n.hours() - now.getUTCHours();
+		let diff = n.hour() - now.getUTCHours();
 		let shouldBeDate = now.getUTCDate();
 
 		if(diff > 12) {
