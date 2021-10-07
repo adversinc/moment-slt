@@ -15,12 +15,12 @@
   "author": "Dino Fabrello <dinofabrello@slbiz2life.com>",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "^6.2.0",
-    "mocha-logger": "^1.0.6",
+    "mocha": "^9.1.2",
+    "mocha-logger": "^1.0.7",
     "nyx": "^0.1.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.4.3"
   },
   "dependencies": {
-    "dayjs": "^1.10.4"
+    "dayjs": "^1.10.7"
   }
 }
