@@ -1,6 +1,6 @@
 {
   "name": "@advers/moment-SLT",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "SecondLife timezone manipulation",
   "main": "lib/index.js",
   "scripts": {
