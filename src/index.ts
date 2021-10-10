@@ -6,11 +6,10 @@
  * Use this module instead of moment/moment-timezone everywhere.
  */
 
-import * as DJS from "dayjs";
+import dayjs from "dayjs";
 
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
-import relativeTime from 'dayjs/plugin/relativeTime';
 
 const SLT = {
 	"version": "2017c",
@@ -23,18 +22,10 @@ const SLT = {
 	]
 };
 
-DJS.extend(utc);
-DJS.extend(timezone);
-DJS.extend(relativeTime);
-
-// Just for syntax check
-if(false) {
-	const dayslt = DJS as any as DJS.Dayjs;
-	dayslt.tz("America/New_York");
-	dayslt.to(new Date());
-}
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 // moment.tz.load(SLT);
 // export default moment;
 
-export default DJS;
+export default dayjs;
