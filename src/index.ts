@@ -26,6 +26,6 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 // moment.tz.load(SLT);
-// export default moment;
+dayjs.tz.setDefault("America/Los_Angeles")
 
-export default dayjs;
+export default dayjs.tz;
