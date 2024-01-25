@@ -6,5 +6,5 @@
  * Use this module instead of moment/moment-timezone everywhere.
  */
 import dayjs from "dayjs";
-declare const _default: dayjs.DayjsTimezone;
-export default _default;
+declare const dayjsTZ: dayjs.Dayjs & dayjs.DayjsTimezone;
+export default dayjsTZ;
