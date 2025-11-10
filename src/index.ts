@@ -6,7 +6,9 @@
  * Use this module instead of moment/moment-timezone everywhere.
  */
 
-import dayjs from "dayjs";
+//import dayjsOrig from "dayjs";
+import dayjsOrig from 'dayjs';
+import type Dayjs from 'dayjs';
 
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
@@ -22,11 +24,14 @@ const SLT = {
 	]
 };
 
-dayjs.extend(utc);
-dayjs.extend(timezone);
+dayjsOrig.extend(utc);
+// @ts-ignore
+dayjsOrig.extend(timezone);
 
 // moment.tz.load(SLT);
-dayjs.tz.setDefault("America/Los_Angeles");
-const dayjsTZ = dayjs.tz as dayjs.Dayjs & dayjs.DayjsTimezone;
+dayjsOrig.tz.setDefault("America/Los_Angeles");
 
-export default dayjsTZ;
+//export const dayjs = dayjsOrig.tz as dayjsOrig.Dayjs & dayjsOrig.DayjsTimezone;
+export const dayjs = dayjsOrig.tz as unknown as typeof dayjsOrig;
+
+export const dayjsModule = dayjsOrig as unknown as typeof dayjsOrig;

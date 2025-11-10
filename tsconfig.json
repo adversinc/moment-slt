@@ -2,9 +2,9 @@
 	"compilerOptions": {
 		//"sourceMap": true,
 		"esModuleInterop": true,
-		// "moduleResolution": "Node",
-		"module": "nodenext",
-		"target": "es2019",
+		//"allowSyntheticDefaultImports": true,
+		"module": "Node16",
+		"target": "ESNext",
 		"declaration": true,
 
 		"baseUrl": "./",
@@ -16,6 +16,6 @@
 	},
 
 	"include": [
-		"./src/*"
+		"./src/*",
 	]
 }
